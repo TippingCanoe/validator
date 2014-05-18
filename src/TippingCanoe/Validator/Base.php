@@ -149,6 +149,17 @@ abstract class Base implements ArrayAccess {
 	}
 
 	/**
+	 * Returns errors for a specific field.
+	 *
+	 * @param string $offset
+	 * @param null|mixed $default
+	 * @return mixed
+	 */
+	public function getErrorsFor($offset, $default = null) {
+		return $this->errors->get($offset, $default);
+	}
+
+	/**
 	 * Returns only the files for the current request.
 	 *
 	 * @return array
